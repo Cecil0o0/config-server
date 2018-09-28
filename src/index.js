@@ -2,8 +2,8 @@ const vastify = require('vastify')
 const config = require('./config')
 const version = require('../package.json').version
 // const version = '2.0.0'
-const microservicePort = 10010
-const httpPort = 3330
+const microservicePort = 10011
+const httpPort = 3331
 
 vastify.ServerRegister.register({
   bizService: {
@@ -31,8 +31,7 @@ vastify.ServerRegister.register({
 
   seneca.ready(() => {
     app.use(seneca.export('web/context')().routes())
+    app.listen(httpPort)
   })
-
-  app.listen(httpPort)
 })
 

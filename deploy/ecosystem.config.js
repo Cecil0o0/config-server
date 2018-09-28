@@ -7,7 +7,6 @@
 'use strict'
 
 const path = require('path')
-console.log(require("vastify"))
 const { 
   GeneratePM2AppConfig,
   GeneratePM2DeployConfig
